@@ -1,0 +1,4 @@
+C:\Users\B901599\source\repos\CleanArchTemplate\CleanArchTemplate.Domain\obj\Debug\net8.0\CleanArchTemplate.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\B901599\source\repos\CleanArchTemplate\CleanArchTemplate.Domain\obj\Debug\net8.0\CleanArchTemplate.Domain.AssemblyInfoInputs.cache
+C:\Users\B901599\source\repos\CleanArchTemplate\CleanArchTemplate.Domain\obj\Debug\net8.0\CleanArchTemplate.Domain.AssemblyInfo.cs
+C:\Users\B901599\source\repos\CleanArchTemplate\CleanArchTemplate.Domain\obj\Debug\net8.0\CleanArchTemplate.Domain.csproj.CoreCompileInputs.cache
