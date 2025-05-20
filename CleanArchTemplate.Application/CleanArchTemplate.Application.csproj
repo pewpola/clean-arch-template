@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchTemplate.Domain\CleanArchTemplate.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

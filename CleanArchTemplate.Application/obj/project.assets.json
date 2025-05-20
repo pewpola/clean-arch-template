@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "CleanArchTemplate.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/CleanArchTemplate.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArchTemplate.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CleanArchTemplate.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CleanArchTemplate.Domain/CleanArchTemplate.Domain.csproj",
+      "msbuildProject": "../CleanArchTemplate.Domain/CleanArchTemplate.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "CleanArchTemplate.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\B901599\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\B901599\\source\\repos\\CleanArchTemplate\\CleanArchTemplate.Domain\\CleanArchTemplate.Domain.csproj": {
+              "projectPath": "C:\\Users\\B901599\\source\\repos\\CleanArchTemplate\\CleanArchTemplate.Domain\\CleanArchTemplate.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
