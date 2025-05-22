@@ -30,9 +30,9 @@ namespace CleanArchTemplate.Persistence.Repositories
             Context.Remove(entity);
         }
 
-        public Task<T> Get(Guid id, CancellationToken cancellationToken)
+        public async Task<T> Get(Guid id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await Context.Set<T>().FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         }
 
         public Task<List<T>> GetAll(CancellationToken cancellationToken)
@@ -45,5 +45,7 @@ namespace CleanArchTemplate.Persistence.Repositories
             entity.DateUpdated = DateTimeOffset.UtcNow;
             Context.Update(entity);
         }
+
+        // Teste
     }
 }

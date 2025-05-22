@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CleanArchTemplate.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f97c62b2f2683e75cbfd8ae4c114e45d53021f82")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+060acc9047287e1cdd6fa5efc9b8c89b84c6034a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleanArchTemplate.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleanArchTemplate.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

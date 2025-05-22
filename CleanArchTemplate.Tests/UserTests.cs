@@ -1,18 +1,18 @@
 using Xunit;
 using CleanArchTemplate.Domain.Entities;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CleanArchTemplate.Tests
 {
     public class UserTests
     {
-        [Fact]
-        public void Can_Set_And_Get_Properties()
+        [Theory]
+        [InlineData("usuario@teste.com", "Usuário Teste")]
+        public void Can_Set_And_Get_Properties(string email, string name)
         {
             // Arrange
             var user = new User();
-            var email = "usuario@teste.com";
-            var name = "Usuário Teste";
             var id = Guid.NewGuid();
             var now = DateTimeOffset.UtcNow;
 

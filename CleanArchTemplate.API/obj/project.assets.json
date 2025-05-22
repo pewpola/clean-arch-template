@@ -471,8 +471,9 @@
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://repo.dreads.bnb/repository/nuget-private/": {},
+        "https://repo.dreads.bnb/repository/nuget/": {},
+        "https://s2iisg01.dreads.bnb/NugetServer/nuget/": {}
       },
       "frameworks": {
         "net8.0": {
