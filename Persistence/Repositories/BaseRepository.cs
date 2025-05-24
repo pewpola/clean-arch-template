@@ -1,22 +1,12 @@
 ﻿using CleanArchTemplate.Domain.Entities;
 using CleanArchTemplate.Domain.Interfaces;
 using CleanArchTemplate.Persistence.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanArchTemplate.Persistence.Repositories
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
+    public class BaseRepository<T>(AppDbContext context) : IBaseRepository<T> where T : BaseEntity
     {
-        protected readonly AppDbContext Context;
-
-        public BaseRepository(AppDbContext context)
-        {
-            Context = context;
-        }
+        protected readonly AppDbContext Context = context;
 
         public void Create(T entity)
         {
@@ -32,12 +22,14 @@ namespace CleanArchTemplate.Persistence.Repositories
 
         public async Task<T> Get(Guid id, CancellationToken cancellationToken)
         {
-            return await Context.Set<T>().FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+            var entity = await Context.Set<T>().FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+
+            return entity ?? throw new InvalidOperationException($"Entidade do tipo {typeof(T).Name} com ID '{id}' não foi encontrada.");
         }
 
-        public Task<List<T>> GetAll(CancellationToken cancellationToken)
+        public async Task<List<T>> GetAll(CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await Context.Set<T>().ToListAsync(cancellationToken);
         }
 
         public void Update(T entity)
@@ -45,7 +37,5 @@ namespace CleanArchTemplate.Persistence.Repositories
             entity.DateUpdated = DateTimeOffset.UtcNow;
             Context.Update(entity);
         }
-
-        // Teste
     }
 }
