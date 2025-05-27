@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchTemplate.Application.UseCases.CreateUser
+namespace CleanArchTemplate.Application.UseCases.GetAllUser
 {
-    public sealed record CreateUserResponse
+    public sealed record GetAllUserResponse
     {
         public Guid Id { get; set; }
         public string? Name { get; set; }

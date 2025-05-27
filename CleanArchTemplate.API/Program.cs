@@ -1,7 +1,7 @@
 
-using CleanArchTemplate.Persistence.Context;
 using CleanArchTemplate.Persistence;
 using CleanArchTemplate.Application.Services;
+using CleanArchTemplate.Persistence.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -11,7 +11,7 @@ namespace CleanArchTemplate.Persistence
 {
     public static class ServiceExtensions
     {
-        public static void AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
+        public static void ConfigurePersistenceApp(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration.GetConnectionString("Sqlite");
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlite(connectionString));
