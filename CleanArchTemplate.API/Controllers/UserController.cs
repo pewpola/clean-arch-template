@@ -1,5 +1,6 @@
 ﻿using CleanArchTemplate.Application.UseCases.CreateUser;
 using CleanArchTemplate.Application.UseCases.GetAllUser;
+using CleanArchTemplate.Application.UseCases.UpdateUser;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -38,6 +39,19 @@ namespace CleanArchTemplate.API.Controllers
             {
                 return NotFound("No users found.");
             }
+
+            return Ok(response);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<UpdateUserResponse>> Update(Guid id, UpdateUserRequest request, CancellationToken cancellationToken)
+        {
+            if (id != request.Id)
+            {
+                return BadRequest();
+            }
+
+            var response = await _mediator.Send(request, cancellationToken);
 
             return Ok(response);
         }

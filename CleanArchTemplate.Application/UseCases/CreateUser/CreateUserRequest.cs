@@ -7,7 +7,5 @@ using MediatR;
 
 namespace CleanArchTemplate.Application.UseCases.CreateUser
 {
-    public sealed record CreateUserRequest(string Email, String Name) : IRequest<CreateUserResponse>
-    {
-    }
+    public sealed record CreateUserRequest(string Email, String Name) : IRequest<CreateUserResponse>;
 }

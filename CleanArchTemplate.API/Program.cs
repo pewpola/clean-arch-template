@@ -2,11 +2,13 @@
 using CleanArchTemplate.Persistence;
 using CleanArchTemplate.Application.Services;
 using CleanArchTemplate.Persistence.Context;
+using CleanArchTemplate.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.ConfigurePersistenceApp(builder.Configuration);
 builder.Services.ConfigureApplicationApp();
+builder.Services.ConfigureCorsPolicy();
 
 // Add services to the container.
 
@@ -24,6 +26,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
