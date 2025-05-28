@@ -6,7 +6,5 @@ using System.Threading.Tasks;
 
 namespace CleanArchTemplate.Application.UseCases.DeleteUser
 {
-    internal class DeleteUserRequest
-    {
-    }
+    public sealed record DeleteUserRequest(Guid Id) : IRequest<DeleteUserResponse>;
 }

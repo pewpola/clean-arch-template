@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CleanArchTemplate.Application.UseCases.DeleteUser
 {
-    internal class DeleteUserMapper
+    public sealed class DeleteUserMapper : Profile
     {
+        public DeleteUserMapper()
+        {
+            CreateMap<DeleteUserRequest, User>();
+            CreateMap<User, DeleteUserResponse>();
+        }
     }
 }

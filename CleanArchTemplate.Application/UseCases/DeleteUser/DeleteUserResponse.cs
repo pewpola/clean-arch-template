@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CleanArchTemplate.Application.UseCases.DeleteUser
 {
-    internal class DeleteUserResponse
+    public sealed record DeleteUserResponse
     {
+        public Guid Id { get; set; }
+        public string? Name { get; set; }
+        public string? Email { get; set; }
     }
 }
